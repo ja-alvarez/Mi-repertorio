@@ -34,7 +34,7 @@ app.post('/cancion', async (req, res) => {
             message: 'Canción agregada con éxito.'
         })
     } catch (error) {
-        console.log('Error al intentar agregar la canción.', error)
+        log('Error al intentar agregar la canción.', error)
         res.status(500).json({
             message: 'Error interno del servidor.'
         })
@@ -46,7 +46,7 @@ app.get('/canciones', async (req, res) => {
         let canciones = await operaciones.obtenerCanciones();
         res.status(200).json(canciones)
     } catch (error) {
-        console.log('Error al intentar obtener el listado de canciones.', error)
+        log('Error al intentar obtener el listado de canciones.', error)
         res.status(500).json({
             message: 'Error interno del servidor.'
         })
