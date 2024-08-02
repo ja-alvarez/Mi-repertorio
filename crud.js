@@ -33,7 +33,6 @@ const obtenerCanciones = async () => {
         let query = "SELECT * FROM canciones ORDER BY id";
         let results = await consultarDB(query);
         let canciones = results.rows;
-        //console.log(canciones);
         return canciones;
     } catch (error) {
         console.log(error);
